@@ -1,12 +1,27 @@
-# Limpeza de Usuários
+# LimpaPerfis
 
-Ferramenta em PowerShell com interface gráfica para **listar e apagar vários perfis de usuário do Windows de uma vez**, igual ao `sysdm.cpl` → *Perfis de Usuário*, mas em lote.
+> **Limpeza de Perfis do Windows.** Apague vários perfis de usuário de uma vez, em uma única tela, em vez de excluir um por um no `sysdm.cpl`.
 
-Feita para computadores compartilhados com alta rotatividade de usuários (estagiários, laboratórios, recepção, plantão), onde cada novo login cria um perfil em `C:\Users` e, com o tempo, o disco enche e a máquina fica lenta.
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?logo=powershell&logoColor=white)
+![WinForms](https://img.shields.io/badge/Interface-WinForms-512BD4)
 
 ![Tela da ferramenta](docs/tela.png)
 
 *Imagem com dados fictícios.*
+
+## Motivação
+
+**O problema.** Em setores com alta rotatividade, como estágio, laboratório, recepção e plantão, cada pessoa nova que faz login cria um perfil em `C:\Users`. Esses perfis ficam lá depois que a pessoa sai. Com o tempo, o SSD enche e o computador fica lento. A solução comum é abrir o `sysdm.cpl` e excluir perfil por perfil, ou formatar a máquina.
+
+**A solução.** O LimpaPerfis mostra todos os perfis da máquina em uma janela só, com o último logon, os dias sem uso e o tamanho de cada um. O técnico marca os perfis que quer remover, ou seleciona automaticamente os que estão sem uso há N dias, e apaga todos com um clique. A exclusão usa o mesmo mecanismo do `sysdm.cpl`.
+
+**Resultado:**
+
+- Menos tempo de suporte: dezenas de perfis removidos em segundos, sem formatar a máquina.
+- Mais espaço e desempenho: o espaço liberado é mostrado ao final.
+- Segurança: o usuário logado, o técnico e as contas protegidas não podem ser apagados.
+- Rastreabilidade: cada execução gera um log com o que foi apagado ou falhou.
 
 ---
 
