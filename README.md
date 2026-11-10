@@ -60,7 +60,7 @@ Além disso:
 
 ## Como usar
 
-1. Baixe o repositório em **Code → Download ZIP** e extraia numa pasta.
+1. Baixe o **[LimpezaPerfis.zip](https://github.com/eduardoGuerra56/limpeza-usuarios/raw/main/LimpezaPerfis.zip)** e extraia numa pasta.
 2. Abra o `LimpezaPerfis.ps1` no Bloco de Notas e ajuste a lista de perfis protegidos. Veja a seção [Configuração](#configuração).
 3. Dê **duplo clique no `LimpezaPerfis.bat`** e aceite o pedido de administrador.
 4. Marque os perfis, ou use o botão "Marcar sem uso há ≥ N dias".
